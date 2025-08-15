@@ -34,23 +34,25 @@ export default function Services() {
           We Offer Best Services
         </h1>
       </div>
-      {serviceContents.map((item, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center justify-center mb-12"
-        >
-          <div className="flex flex-col flex-wrap">
-            <Image
-              src={item.image}
-              width={92}
-              height={92}
-              alt="weather image"
-            />
-            <h3 className="text-xl font-bold py-4">{item.heading}</h3>
-            <p className="w-46">{item.paragraph}</p>
+      <div className="flex flex-col justify-between md:flex-row">
+        {serviceContents.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center mb-12"
+          >
+            <div className="flex flex-col flex-wrap">
+              <Image
+                src={item.image}
+                width={92}
+                height={92}
+                alt="weather image"
+              />
+              <h3 className="text-xl font-bold py-4">{item.heading}</h3>
+              <p className="w-46">{item.paragraph}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

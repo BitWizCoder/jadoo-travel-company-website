@@ -27,7 +27,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="text-center items-center">
+    <div className="text-center items-center mt-24">
       <div>
         <h2>CATEGORY</h2>
         <h1 className="text-2xl font-bold text-[#14183E] mb-18">

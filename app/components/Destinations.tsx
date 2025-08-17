@@ -10,13 +10,13 @@ export default function Destinations() {
     },
     {
       name: "London, UK",
-      image: "/italy.png",
+      image: "/london.png",
       price: "$4.2k",
       days: "12 Days Trip",
     },
     {
       name: "Full Europe",
-      image: "/italy.png",
+      image: "/europe.png",
       price: "$15k",
       days: "28 Days Trip",
     },
@@ -31,21 +31,27 @@ export default function Destinations() {
         </h1>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         {contents.map((content) => (
-          <div key={content.name}>
-            <Image
-              src={content.image}
-              width={314}
-              height={300}
-              alt="location image"
-            />
-            <div>
-              <div>
-                <p>{content.name}</p>
-                <p>{content.price}</p>
+          <div
+            key={content.name}
+            className="text-left shadow-gray-100 shadow rounded-xl"
+          >
+            <div className="overflow-hidden rounded-xl">
+              <Image
+                src={content.image}
+                alt="location image"
+                width={314}
+                height={457}
+                className="w-full h-full object-cover block"
+              />
+            </div>
+            <div className="px-6 py-6">
+              <div className="flex justify-between mb-6">
+                <p className="font-semibold">{content.name}</p>
+                <p className="text-gray-600">{content.price}</p>
               </div>
-              <p>{content.days}</p>
+              <p className="text-sm text-gray-500">{content.days}</p>
             </div>
           </div>
         ))}

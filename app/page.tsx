@@ -1,6 +1,7 @@
 import Destinations from "./components/Destinations";
 import Header from "./components/Header";
 import Services from "./components/Services";
+import Trip from "./components/Trip";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Services />
       <Destinations />
+      <Trip />
     </main>
   );
 }
